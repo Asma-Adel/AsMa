@@ -50,33 +50,6 @@ public class HomeActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
-
-        love = false;
-        Post_Profile_Img = findViewById(R.id.post_profile_image);
-        Post_Delete = findViewById(R.id.post_delete);
-        Post_Delete = findViewById(R.id.post_delete);
-        Post_Fav = findViewById(R.id.post_nofav);
-        Post_Love = findViewById(R.id.post_nolove);
-        Post_Share = findViewById(R.id.post_share);
-        Post_Comment = findViewById(R.id.post_comment);
-        The_Post = findViewById(R.id.the_post);
-
-
-
-        Post_Profile_Img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                BitmapDrawable bitmapDrawable =((BitmapDrawable)Post_Profile_Img.getDrawable());
-                Intent photoActivity = new Intent(HomeActivity.this,PhotoActivity.class);
-                photoActivity.putExtra("photo",encodeImage(bitmapDrawable.getBitmap()));
-                startActivity(photoActivity);
-            }
-        });
-
-
-
-
     }
 
     static public String encodeImage(Bitmap imagee) {

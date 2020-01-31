@@ -22,6 +22,8 @@ import static com.example.asma.HomeActivity.posts;
 class PostAdapter extends ArrayAdapter<Post> {
     AlertDialog dialog;
     Context Vcontext;
+    View post;
+    LayoutInflater layoutInflater;
     public PostAdapter(@NonNull Context context, @NonNull List<Post> objects) {
         super(context, 0 , objects);
 
@@ -31,9 +33,12 @@ class PostAdapter extends ArrayAdapter<Post> {
     @NonNull
     @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        final LayoutInflater layoutInflater = (LayoutInflater)Vcontext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View post = layoutInflater.inflate(R.layout.post , parent , false);
+        if(convertView ==null) {
+            layoutInflater = (LayoutInflater) Vcontext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = layoutInflater.inflate(R.layout.post, parent, false);
 
+            post = convertView;
+        }
         ImageView myprofileImg = post.findViewById(R.id.post_profile_image);
         TextView myusername = post.findViewById(R.id.post_username);
         ImageView mythepost = post.findViewById(R.id.the_post);
