@@ -22,7 +22,6 @@ import static com.example.asma.HomeActivity.posts;
 class PostAdapter extends ArrayAdapter<Post> {
     AlertDialog dialog;
     Context Vcontext;
-    View post;
     LayoutInflater layoutInflater;
     public PostAdapter(@NonNull Context context, @NonNull List<Post> objects) {
         super(context, 0 , objects);
@@ -37,14 +36,14 @@ class PostAdapter extends ArrayAdapter<Post> {
             layoutInflater = (LayoutInflater) Vcontext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.post, parent, false);
 
-            post = convertView;
         }
-        ImageView myprofileImg = post.findViewById(R.id.post_profile_image);
-        TextView myusername = post.findViewById(R.id.post_username);
-        ImageView mythepost = post.findViewById(R.id.the_post);
-        final ImageView love = post.findViewById(R.id.post_nolove);
-        final ImageView rate = post.findViewById(R.id.post_nofav);
-        final  ImageView delete = post.findViewById(R.id.post_delete);
+
+        ImageView myprofileImg = convertView.findViewById(R.id.post_profile_image);
+        TextView myusername = convertView.findViewById(R.id.post_username);
+        ImageView mythepost = convertView.findViewById(R.id.the_post);
+        final ImageView love = convertView.findViewById(R.id.post_nolove);
+        final ImageView rate = convertView.findViewById(R.id.post_nofav);
+        final  ImageView delete = convertView.findViewById(R.id.post_delete);
 
         final Post currentPost = getItem(position);
 
@@ -98,6 +97,6 @@ class PostAdapter extends ArrayAdapter<Post> {
             }
         });
 
-        return post;
+        return convertView;
     }
 }
