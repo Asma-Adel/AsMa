@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">أس ما</string>
+    <string name="Email">البريد الالكتروني</string>
+    <string name="Password">كلمة السر</string>
+    <string name="Password_Confirm">تأكيد كلمة المرور</string>
+    <string name="Phone_Number">رقم الهاتف</string>
+    <string name="Date_Of_Birth">تاريخ الميلاد</string>
+    <string name="Select_a_Country">اختر دولة</string>
+    <string name="Sign_Up">تسجيل</string>
+    <string name="Already_have_an_account">لديك حساب بالفعل ؟ تسجيل الدخول</string>
+    <string name="Login">تسجيل الدخول</string>
+    <string name="Afghanistan">افغانستان</string>
+    <string name="Albania">البانيا</string>
+    <string name="Algeria">الجزائر</string>
+    <string name="Andorra">اندورا</string>
+    <string name="Angola">انغولا</string>
+    <string name="Email_or_Password_not_correct">البريد الالكتروني او كلمة المرور غير صحيحة</string>
+    <string name="Failed_canot_be_empty">مطلوب , لا يمكن ان يكون فارغ</string>
+    <string name="Please_Enter_valid_Email">رجاء قم بادخال بريد الكتروني صحيج</string>
+    <string name="Password_too_weak">كلمة المرور ضعيفة</string>
+    <string name="Passwords_are_not_same">كلمة المرور غير متطابقة</string>
+    <string name="Phone_number_not_valid">رقم الهاتف غير صحيح</string>
+    <string name="Please_take_profile">رجاء قم بوضع صورة الملف الشخصي</string>
+    <string name="Please_select_Country">رجاء قم باختيار دولة</string>
+
+
+
+</resources>
