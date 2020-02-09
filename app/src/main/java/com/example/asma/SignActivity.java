@@ -174,7 +174,7 @@ public class SignActivity extends AppCompatActivity implements DatePickerDialog.
         c.set(Calendar.MONTH , month);
         c.set(Calendar.DAY_OF_MONTH , dayOfMonth);
         String currentDateString = DateFormat.getDateInstance(DateFormat.FULL).format(c.getTime());
-        Sign_Birth2.setHint(currentDateString);
+        Sign_Birth2.getEditText().setText(currentDateString);
     }
     private boolean validatebirth(){
         SignBirthInput = Sign_Birth2.getEditText().getText().toString().trim();

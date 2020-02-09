@@ -25,8 +25,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HomeActivity extends AppCompatActivity {
     ListView listView;
-    ImageView Post_Delete , Post_Love , Post_Fav , Post_Share , Post_Comment ,The_Post;
-    boolean love;
+    //ImageView Post_Delete , Post_Love , Post_Fav , Post_Share , Post_Comment ,The_Post;
     public static ArrayList<Post> posts = new ArrayList<>();
     private CircleImageView Post_Profile_Img;
     public static PostAdapter adapter;
@@ -52,39 +51,5 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-    static public String encodeImage(Bitmap imagee) {
 
-        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        imagee.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
-        byte[] b = bytes.toByteArray();
-        String encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
-        return encodedImage;
-    }
 }
-    /*
-     * convert Bitmap to String
-
-    static public String encodeImage(Bitmap imagee) {
-
-        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        imagee.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
-        byte[] b = bytes.toByteArray();
-        String encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
-        return encodedImage;
-    }
-
-
-    /**
-     * to convert string to Bitmap
-     **
-    static public Bitmap StringToBitMap(String encodedString) {
-        try {
-            byte[] encodeByte = Base64.decode(encodedString, Base64.DEFAULT);
-            Bitmap bitmap = BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.length);
-            return bitmap;
-        } catch (Exception e) {
-            e.getMessage();
-            return null;
-        }
-    }*/
-

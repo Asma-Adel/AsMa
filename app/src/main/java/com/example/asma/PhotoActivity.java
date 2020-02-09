@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class PhotoActivity extends AppCompatActivity {
 
@@ -18,6 +19,12 @@ public class PhotoActivity extends AppCompatActivity {
 
         Photo_Activity = findViewById(R.id.photo_activity);
 
+
+        String img  = getIntent().getStringExtra("photo");
+
+        Toast.makeText(this, "" + img , Toast.LENGTH_SHORT).show();
+
+        Photo_Activity.setImageBitmap( StringToBitMap(img) );
     }
 
     static public Bitmap StringToBitMap(String encodedString) {
